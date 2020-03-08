@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+</style>
+
+<script>
+function redirect() {
+  var url=document.f.annee.value+'/'+document.f.metrique.value+'.html'
+  document.location.href=url
+}
+
+
+function compare() {
+  var annee1=document.f2.annee1.value
+  var metrique=document.f2.metrique.value
+  var annee2=document.f2.annee2.value
+  document.location.href='comparison.html?'+'metrique='+metrique+'&annee1='+annee1+'&annee2='+annee2
+}
+</script>
+
+</head>
+<body>
+
+<div class="scrollmenu">
+  <a>Accueil</a>
+</div>
+
+<h2>Statistiques</h2>
+......
+<h2>Cartes Interactives</h2>
+<p>Sélectionner une métrique et une année</p>
+
+
+<FORM name="f"> 
+<label for="annee">Année:</label>
+<select name="annee" id="annee">
+    <option value="2017">2017</ption>
+    <option value="2018">2018</ption>
+</select>
+
+
+<br/>
+<br/>
+<br/>
+
+<label for="metrique">Métrique:</label>
+<select name="metrique" id="metrique">
+	<option value="EQUIPIERS">EQUIPIERS</ption>
+	<option value="RECRUTEMENT">RECRUTEMENT</ption>
+	<option value="JOURNEES_DE_FORMATIONS_SADGI">JOURNEES_DE_FORMATIONS_SADGI</ption>
+	<option value="JOURNEES_FORMATION_HORS_AFM-TELETHON">JOURNEES_FORMATION_HORS_AFM-TELETHON</ption>
+	<option value="REUNIONS_EQUIPE">REUNIONS_EQUIPE</ption>
+	<option value="NOMBRE_REUNIONS_RESTREINTES">NOMBRE_REUNIONS_RESTREINTES</ption>
+	<option value="VOLUME_HORAIRE">VOLUME_HORAIRE</ption>
+	<option value="EQUIPIERS_MISSION_ROMPRE_L'ISOLEMENT">EQUIPIERS_MISSION_ROMPRE_L'ISOLEMENT</ption>
+	<option value="MALADES_CONNUS">MALADES_CONNUS</ption>
+	<option value="CONTACTS">CONTACTS</ption>
+	<option value="RENCONTRE(S)_CONVIVIALE(S)">RENCONTRE(S)_CONVIVIALE(S)</ption>
+	<option value="PARTICIPATION">PARTICIPATION</ption>
+	<option value="PERMANENCE(S)">PERMANENCE(S)</ption>
+	<option value="ECHANGE_ENTRE_PAIRS">ECHANGE_ENTRE_PAIRS</ption>
+	<option value="VISITES_A_DOMICILE">VISITES_A_DOMICILE</ption>
+	<option value="SEANCES_ATELIER(S)_PERMANENT(S)">SEANCES_ATELIER(S)_PERMANENT(S)</ption>
+	<option value="NOMBRE_POINT(S)_FAMILLES_SR">NOMBRE_POINT(S)_FAMILLES_SR</ption>
+	<option value="NOMBRE_VEHICULE">NOMBRE_VEHICULE</ption>
+	<option value="FREQUENCE_UTILISATION_EQUIPE_DELEGATION">FREQUENCE_UTILISATION_EQUIPE_DELEGATION</ption>
+	<option value="FREQUENCE_UTILISATION_MALADES_FAMILLES">FREQUENCE_UTILISATION_MALADES_FAMILLES</ption>
+	<option value="EQUIPIERS_MISSION_REPRESENTER-REVENDIQUER">EQUIPIERS_MISSION_REPRESENTER-REVENDIQUER</ption>
+	<option value="CDAPH">CDAPH</ption>
+	<option value="CDAPH_ENFANTS">CDAPH_ENFANTS</ption>
+	<option value="COMEX">COMEX</ption>
+	<option value="CDCPH_CDCA">CDCPH_CDCA</ption>
+	<option value="COLLECTIF_INTERASSOCIATIF_DEP">COLLECTIF_INTERASSOCIATIF_DEP</ption>
+	<option value="ACCESSIBILITE_COMMUNALE_INTERCOMMUNALE">ACCESSIBILITE_COMMUNALE_INTERCOMMUNALE</ption>
+	<option value="ACCESSIBILITE_DEPARTEMENTALE">ACCESSIBILITE_DEPARTEMENTALE</ption>
+	<option value="CONFERENCE_DE_TERRITOIRE_CONSEIL_TERRITORIAL_DE_SANTE_(CTS)">CONFERENCE_DE_TERRITOIRE_CONSEIL_TERRITORIAL_DE_SANTE_(CTS)</ption>
+	<option value="CRUQPC_DEPARTEMENT">CRUQPC_DEPARTEMENT</ption>
+	<option value="MAISON_DES_USAGERS">MAISON_DES_USAGERS</ption>
+	<option value="COLLECTIF_INTERASSOCIATIF_REG">COLLECTIF_INTERASSOCIATIF_REG</ption>
+	<option value="UNAASS_CISS_FRANCE_ASSOS_SANTE">UNAASS_CISS_FRANCE_ASSOS_SANTE</ption>
+	<option value="CRSA">CRSA</ption>
+	<option value="CRUQPC_REGION">CRUQPC_REGION</ption>
+	<option value="MAIRE">MAIRE</ption>
+	<option value="DEPUTES">DEPUTES</ption>
+	<option value="SENATEURS">SENATEURS</ption>
+	<option value="INTERVENTION(S)">INTERVENTION(S)</ption>
+	<option value="TEMOIGNAGE_PRESSE">TEMOIGNAGE_PRESSE</ption>
+	<option value="EQUIPIERS_MISSION_PREVENIR_INFORMER">EQUIPIERS_MISSION_PREVENIR_INFORMER</ption>
+	<option value="REUNION(S)_INFO_DEPARTEMENTALE(S)">REUNION(S)_INFO_DEPARTEMENTALE(S)</ption>
+	<option value="PARTICIPATION_DEPARTEMENTALE">PARTICIPATION_DEPARTEMENTALE</ption>
+	<option value="REUNION(S)_INFO_REGIONALE(S)">REUNION(S)_INFO_REGIONALE(S)</ption>
+	<option value="PARTICIPATION_REGIONALE">PARTICIPATION_REGIONALE</ption>
+	<option value="PERMANENCE(S)_HORS_LOCAL">PERMANENCE(S)_HORS_LOCAL</ption>
+	<option value="SOLLICITATION_SR_RENCONTRE_ENTRE_PAIRS">SOLLICITATION_SR_RENCONTRE_ENTRE_PAIRS</ption>
+	<option value="CONTACT(S)_GROUPES_D'INTERET">CONTACT(S)_GROUPES_D'INTERET</ption>
+	<option value="REUNION(S)_INTER-DELEGATIONS">REUNION(S)_INTER-DELEGATIONS</ption>
+	<option value="REUNION(S)_REGIONALE(S)_MISSION_AIDER">REUNION(S)_REGIONALE(S)_MISSION_AIDER</ption>
+	<option value="REUNION(S)_DELEGATION_COORDINATION">REUNION(S)_DELEGATION_COORDINATION</ption>
+	<option value="IMPLICATION_TELETHON">IMPLICATION_TELETHON</ption>
+	<option value="NOMBRE_E-MESSAGERS">NOMBRE_E-MESSAGERS</ption>
+	<option value="PARTICIPATION_GROUPE_DE_TRAVAIL_SIEGE">PARTICIPATION_GROUPE_DE_TRAVAIL_SIEGE</ption>
+	<option value="PARTICIPATION_FORMATION_SIEGE">PARTICIPATION_FORMATION_SIEGE</ption>
+	<option value="REUNION(S)_PARTENAIRES">REUNION(S)_PARTENAIRES</ption>
+
+</select>
+
+
+<br/>
+<br/>
+<br/>
+
+<input type="button" onclick="redirect()" value="Valider">
+
+
+</FORM> 
+
+<p id="demo"></p>
+
+<br/>
+<br/>
+<br/>
+
+<h2>Cartes Interactives: Comparaison</h2>
+<p>Sélectionner une métrique et deux années à comparer</p>
+
+<FORM name="f2"> 
+<label for="metrique">Métrique:</label>
+<select name="metrique" id="metrique">
+	<option value="EQUIPIERS">EQUIPIERS</ption>
+	<option value="RECRUTEMENT">RECRUTEMENT</ption>
+	<option value="JOURNEES_DE_FORMATIONS_SADGI">JOURNEES_DE_FORMATIONS_SADGI</ption>
+	<option value="JOURNEES_FORMATION_HORS_AFM-TELETHON">JOURNEES_FORMATION_HORS_AFM-TELETHON</ption>
+	<option value="REUNIONS_EQUIPE">REUNIONS_EQUIPE</ption>
+	<option value="NOMBRE_REUNIONS_RESTREINTES">NOMBRE_REUNIONS_RESTREINTES</ption>
+	<option value="VOLUME_HORAIRE">VOLUME_HORAIRE</ption>
+	<option value="EQUIPIERS_MISSION_ROMPRE_L'ISOLEMENT">EQUIPIERS_MISSION_ROMPRE_L'ISOLEMENT</ption>
+	<option value="MALADES_CONNUS">MALADES_CONNUS</ption>
+	<option value="CONTACTS">CONTACTS</ption>
+	<option value="RENCONTRE(S)_CONVIVIALE(S)">RENCONTRE(S)_CONVIVIALE(S)</ption>
+	<option value="PARTICIPATION">PARTICIPATION</ption>
+	<option value="PERMANENCE(S)">PERMANENCE(S)</ption>
+	<option value="ECHANGE_ENTRE_PAIRS">ECHANGE_ENTRE_PAIRS</ption>
+	<option value="VISITES_A_DOMICILE">VISITES_A_DOMICILE</ption>
+	<option value="SEANCES_ATELIER(S)_PERMANENT(S)">SEANCES_ATELIER(S)_PERMANENT(S)</ption>
+	<option value="NOMBRE_POINT(S)_FAMILLES_SR">NOMBRE_POINT(S)_FAMILLES_SR</ption>
+	<option value="NOMBRE_VEHICULE">NOMBRE_VEHICULE</ption>
+	<option value="FREQUENCE_UTILISATION_EQUIPE_DELEGATION">FREQUENCE_UTILISATION_EQUIPE_DELEGATION</ption>
+	<option value="FREQUENCE_UTILISATION_MALADES_FAMILLES">FREQUENCE_UTILISATION_MALADES_FAMILLES</ption>
+	<option value="EQUIPIERS_MISSION_REPRESENTER-REVENDIQUER">EQUIPIERS_MISSION_REPRESENTER-REVENDIQUER</ption>
+	<option value="CDAPH">CDAPH</ption>
+	<option value="CDAPH_ENFANTS">CDAPH_ENFANTS</ption>
+	<option value="COMEX">COMEX</ption>
+	<option value="CDCPH_CDCA">CDCPH_CDCA</ption>
+	<option value="COLLECTIF_INTERASSOCIATIF_DEP">COLLECTIF_INTERASSOCIATIF_DEP</ption>
+	<option value="ACCESSIBILITE_COMMUNALE_INTERCOMMUNALE">ACCESSIBILITE_COMMUNALE_INTERCOMMUNALE</ption>
+	<option value="ACCESSIBILITE_DEPARTEMENTALE">ACCESSIBILITE_DEPARTEMENTALE</ption>
+	<option value="CONFERENCE_DE_TERRITOIRE_CONSEIL_TERRITORIAL_DE_SANTE_(CTS)">CONFERENCE_DE_TERRITOIRE_CONSEIL_TERRITORIAL_DE_SANTE_(CTS)</ption>
+	<option value="CRUQPC_DEPARTEMENT">CRUQPC_DEPARTEMENT</ption>
+	<option value="MAISON_DES_USAGERS">MAISON_DES_USAGERS</ption>
+	<option value="COLLECTIF_INTERASSOCIATIF_REG">COLLECTIF_INTERASSOCIATIF_REG</ption>
+	<option value="UNAASS_CISS_FRANCE_ASSOS_SANTE">UNAASS_CISS_FRANCE_ASSOS_SANTE</ption>
+	<option value="CRSA">CRSA</ption>
+	<option value="CRUQPC_REGION">CRUQPC_REGION</ption>
+	<option value="MAIRE">MAIRE</ption>
+	<option value="DEPUTES">DEPUTES</ption>
+	<option value="SENATEURS">SENATEURS</ption>
+	<option value="INTERVENTION(S)">INTERVENTION(S)</ption>
+	<option value="TEMOIGNAGE_PRESSE">TEMOIGNAGE_PRESSE</ption>
+	<option value="EQUIPIERS_MISSION_PREVENIR_INFORMER">EQUIPIERS_MISSION_PREVENIR_INFORMER</ption>
+	<option value="REUNION(S)_INFO_DEPARTEMENTALE(S)">REUNION(S)_INFO_DEPARTEMENTALE(S)</ption>
+	<option value="PARTICIPATION_DEPARTEMENTALE">PARTICIPATION_DEPARTEMENTALE</ption>
+	<option value="REUNION(S)_INFO_REGIONALE(S)">REUNION(S)_INFO_REGIONALE(S)</ption>
+	<option value="PARTICIPATION_REGIONALE">PARTICIPATION_REGIONALE</ption>
+	<option value="PERMANENCE(S)_HORS_LOCAL">PERMANENCE(S)_HORS_LOCAL</ption>
+	<option value="SOLLICITATION_SR_RENCONTRE_ENTRE_PAIRS">SOLLICITATION_SR_RENCONTRE_ENTRE_PAIRS</ption>
+	<option value="CONTACT(S)_GROUPES_D'INTERET">CONTACT(S)_GROUPES_D'INTERET</ption>
+	<option value="REUNION(S)_INTER-DELEGATIONS">REUNION(S)_INTER-DELEGATIONS</ption>
+	<option value="REUNION(S)_REGIONALE(S)_MISSION_AIDER">REUNION(S)_REGIONALE(S)_MISSION_AIDER</ption>
+	<option value="REUNION(S)_DELEGATION_COORDINATION">REUNION(S)_DELEGATION_COORDINATION</ption>
+	<option value="IMPLICATION_TELETHON">IMPLICATION_TELETHON</ption>
+	<option value="NOMBRE_E-MESSAGERS">NOMBRE_E-MESSAGERS</ption>
+	<option value="PARTICIPATION_GROUPE_DE_TRAVAIL_SIEGE">PARTICIPATION_GROUPE_DE_TRAVAIL_SIEGE</ption>
+	<option value="PARTICIPATION_FORMATION_SIEGE">PARTICIPATION_FORMATION_SIEGE</ption>
+	<option value="REUNION(S)_PARTENAIRES">REUNION(S)_PARTENAIRES</ption>
+
+</select>
+
+
+<br/>
+<br/>
+<br/>
+
+
+<label for="annee1">Année 1:</label>
+<select name="annee1" id="annee1">
+    <option value="2017">2017</ption>
+    <option value="2018">2018</ption>
+</select>
+
+
+<br/>
+<br/>
+<br/>
+
+<label for="annee2">Année 2:</label>
+<select name="annee2" id="annee2">
+    <option value="2017">2017</ption>
+    <option value="2018">2018</ption>
+</select>
+
+
+<br/>
+<br/>
+<br/>
+
+
+<input type="button" onclick="compare()" value="Valider">
+
+
+</FORM> 
+
+<p id="demo"></p>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
