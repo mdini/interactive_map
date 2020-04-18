@@ -20,9 +20,13 @@ function getvars(){
 	var annee1 = getUrlVars()["annee1"];
 	var annee2 = getUrlVars()["annee2"];
 	var url1= annee1+"/"+metrique+".html"
+	var url1b= annee1+"/REUNION/"+metrique+".html"
 	var url2= annee2+"/"+metrique+".html"
+	var url2b= annee2+"/REUNION/"+metrique+".html"
 	document.getElementById("fr1").src =url1;
+	document.getElementById("fr1b").src =url1b;
 	document.getElementById("fr2").src =url2;
+	document.getElementById("fr2b").src =url2b;
 }
 
 </script>
@@ -31,17 +35,26 @@ function getvars(){
 <body>
 
  <iframe id=fr1  src=""  frameborder="0" scrolling="yes"                           
-                                style="height: 100%; 
-                                            width: 49%; float: left; " height="100%" width="49%"
+                                style="height: 79%; width: 49%; 
                                align="left">
                               </iframe>  
 
- <iframe id=fr2 src="" frameborder="0" scrolling="yes"  
-                                    style="overflow: hidden; height: 100%;
 
-                                    width: 49%; " height="100%" width="49%"                                 
+ <iframe id=fr2 src="" frameborder="0" scrolling="yes"  
+                                    style="overflow: hidden; height: 79%; width: 49%;"             
                                      align="right">
                                     </iframe>
+
+<iframe id=fr1b  src=""  frameborder="0" scrolling="yes"                           
+                                style="height: 15%; width: 20%;  position:relative; top: 20px; left: 250px;"
+                               align="left">
+                              </iframe> 
+
+ <iframe id=fr2b src="" frameborder="0" scrolling="yes"  
+                                    style="overflow: hidden; height: 15%; width: 20%; position:relative; top: 20px; right: 			250px;"                              
+                                     align="right">
+                                    </iframe>
+
 <script>
 getvars();
 </script>
