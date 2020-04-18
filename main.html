@@ -24,8 +24,9 @@ div.scrollmenu a:hover {
 
 <script>
 function redirect() {
-  var url=document.f.annee.value+'/'+document.f.metrique.value+'.html'
-  document.location.href=url
+  var annee=document.f.annee.value
+  var metrique=document.f.metrique.value  
+  document.location.href='metric.html?'+'metrique='+metrique+'&annee='+annee
 }
 
 
