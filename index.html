@@ -6,18 +6,16 @@
 <div class="wrapper">
             <form class="form1">
                 <div class="formtitle">
-                    Enter the password to proceed
+                    Metrics
                 </div>
 
                 <div class="input nobottomborder">
-                    <div class="inputtext">
-                        Password:
-                    </div>
 
                     <div class="inputcontent">
                         <input type="password" id="password" /><br />
                     </div>
                 </div>
+
 
                 <div class="buttons">
                     <input class="orangebutton" type="button" value="Login" onclick="checkPassword()" />
@@ -25,10 +23,44 @@
             </form>
         </div>
 
+
+ <br> <br> <br>
+
+<div class="wrapper">
+            <form class="form1">
+                <div class="formtitle">
+                    Feedback
+                </div>
+
+                <div class="input nobottomborder">
+
+                    <div class="inputcontent">
+                        <input type="password" id="password" /><br />
+                    </div>
+                </div>
+
+
+                <div class="buttons">
+                    <input class="orangebutton" type="button" value="Login" onclick="checkPassword2()" />
+                </div>
+            </form>
+        </div>
+
+
+
        <script>
       function checkPassword(){
        if(document.getElementById('password').value == 'AFM_Pass@word20'){
         location.href = "main.html";
+         } else {
+         alert('Wrong Password!');
+          return false;
+        }
+       }
+
+      function checkPassword2(){
+       if(document.getElementById('password').value == 'AFM_Pass@word20'){
+        location.href = "feedback.html";
          } else {
          alert('Wrong Password!');
           return false;
