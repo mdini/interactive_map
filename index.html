@@ -45,6 +45,29 @@
                 </div>
             </form>
         </div>
+        
+
+ <br> <br> <br>
+
+<div class="wrapper">
+            <form class="form3">
+                <div class="formtitle">
+                    Cartographie
+                </div>
+
+                <div class="input nobottomborder">
+
+                    <div class="inputcontent">
+                        <input type="password" id="password3" /><br />
+                    </div>
+                </div>
+
+
+                <div class="buttons">
+                    <input class="orangebutton" type="button" value="Login" onclick="checkPassword3()" />
+                </div>
+            </form>
+        </div>        
 
 
 
@@ -66,5 +89,15 @@
           return false;
         }
        }
+       
+        function checkPassword3(){
+       if(document.getElementById('password2').value == 'AFM_Pass@word20'){
+        location.href = "cartographie.html";
+         } else {
+         alert('Wrong Password!');
+          return false;
+        }
+       }
+       
       </script>
 </body>
