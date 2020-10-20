@@ -791,7 +791,7 @@ mix-blend-mode: difference;}
   font-size: 2em;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(90deg, white, orange, black);url("../images/sa8run.png")  no-repeat left ;
+  background: linear-gradient(90deg, black, white, black);url("../images/sa8run.png")  no-repeat left ;
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 5s linear infinite;

@@ -669,7 +669,7 @@ bonde {
     position: relative;
     overflow: hidden;
     filter: brightness(200%);
-	/* margin-top:9%; */
+	margin-top:2%;
 
 }
 
@@ -864,22 +864,4 @@ body b{
     }
   }
 }
- p {  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
-  background-color: black;
-  position: relative;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  font-size: 2em;
-  letter-spacing: 4px;
-  overflow: hidden;
-  background: linear-gradient(90deg, red, #fff, yellow);url("../images/sa8run.png")  no-repeat left ;
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 5s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
-}
-
+ 
