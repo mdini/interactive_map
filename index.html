@@ -1,103 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<div class="wrapper">
-            <form class="form1">
-                <div class="formtitle">
-                    Metrics
-                </div>
-
-                <div class="input nobottomborder">
-
-                    <div class="inputcontent">
-                        <input type="password" id="password" /><br />
-                    </div>
-                </div>
-
-
-                <div class="buttons">
-                    <input class="orangebutton" type="button" value="Login" onclick="checkPassword()" />
-                </div>
-            </form>
-        </div>
-
-
- <br> <br> <br>
-
-<div class="wrapper">
-            <form class="form2">
-                <div class="formtitle">
-                    Feedback
-                </div>
-
-                <div class="input nobottomborder">
-
-                    <div class="inputcontent">
-                        <input type="password" id="password2" /><br />
-                    </div>
-                </div>
-
-
-                <div class="buttons">
-                    <input class="orangebutton" type="button" value="Login" onclick="checkPassword2()" />
-                </div>
-            </form>
-        </div>
-        
-
- <br> <br> <br>
-
-<div class="wrapper">
-            <form class="form3">
-                <div class="formtitle">
-                    Cartographie
-                </div>
-
-                <div class="input nobottomborder">
-
-                    <div class="inputcontent">
-                        <input type="password" id="password3" /><br />
-                    </div>
-                </div>
-
-
-                <div class="buttons">
-                    <input class="orangebutton" type="button" value="Login" onclick="checkPassword3()" />
-                </div>
-            </form>
-        </div>        
-
-
-
-       <script>
-      function checkPassword(){
-       if(document.getElementById('password').value == 'AFM_Pass@word20'){
-        location.href = "main.html";
-         } else {
-         alert('Wrong Password!');
-          return false;
-        }
-       }
-
-      function checkPassword2(){
-       if(document.getElementById('password2').value == 'AFM_Pass@word20'){
-        location.href = "feedback.html";
-         } else {
-         alert('Wrong Password!');
-          return false;
-        }
-       }
-       
-        function checkPassword3(){
-       if(document.getElementById('password2').value == 'AFM_Pass@word20'){
-        location.href = "cartographie.html";
-         } else {
-         alert('Wrong Password!');
-          return false;
-        }
-       }
-       
-      </script>
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
+</head>    
+<body>   
+<h2>Bienvenu</h2> 
+    <!-- <h2>Se Connecter</h2><br>     -->
+    <div class="login">    
+    <form id="login" method="get" action="login.php">    
+        <label><b>User Name     
+        </b>    
+        </label>    
+        <input type="text" name="Uname" id="Uname" placeholder="Username">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <br><br>    
+        <input type="button" name="log" id="log" value="Se Connecter Ici" onclick="checkPassword()" >       
+        <br><br>    
+        <input type="checkbox" id="check">    
+        <span>Remember me</span>    
+          <a href="#" > Forgot Password</a>    
+    </form>     
+</div>    
 </body>
+ <script>
+      function checkPassword(){
+       if(document.getElementById('Pass').value == 'AFM_Pass@word20'){
+        location.href = "home.html";
+         } else {
+         alert('Wrong Password!');
+          return false;
+        }
+       }   
+      </script>
+	   
+</html> 

@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="prac.css">
+<link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+<link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
 <style>
 div.scrollmenu {
-  background-color: #333;
   overflow: auto;
   white-space: nowrap;
+
 }
 
 div.scrollmenu a {
@@ -20,6 +29,92 @@ div.scrollmenu a {
 div.scrollmenu a:hover {
   background-color: #777;
 }
+
+.topnav{
+    overflow: hidden;
+    background: #ff4d4d;
+    padding: 0;
+	 background:   url("./images/sa8run.png")no-repeat left,  #66CDAA;
+background-size: 4%;
+	
+}
+ul{
+    overflow: hidden;
+    list-style: none;
+    float: right;
+    margin: 0;
+}
+ul li {
+    float: left;
+}
+ul a {
+    margin: 0;
+    line-height: 60px;
+}
+ul a:hover{
+    background: rgba(0,0,0, 0.1);
+    opacity: 1;
+}
+.topnav a {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    float: left;
+    margin: 0;
+    padding-right: 25px;
+    padding-left: 15px;
+}
+.logo a {
+    margin-top: 20px;
+}
+@media screen and (max-width:500px){
+  
+  .topnav a {
+padding:0 10px;
+  
+  }
+  
+  
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+
 </style>
 
 <script>
@@ -34,19 +129,44 @@ function compare() {
   var annee1=document.f2.annee1.value
   var metrique=document.f2.metrique.value
   var annee2=document.f2.annee2.value
-  document.location.href='comparison.html?'+'metrique='+metrique+'&annee1='+annee1+'&annee2='+annee2
+  document.location.href='comparaison.html?'+'metrique='+metrique+'&annee1='+annee1+'&annee2='+annee2
 }
 </script>
 
 </head>
 <body>
 
-<div class="scrollmenu">
-  <a>Accueil</a>
+<header>
+  <div class="topnav">
+      <ul >
+          <li><a href="home.html" >Acceuil</a></li>
+
+      <li><a href="index.html" >Deconnexion</a></li>
+    </ul>
+    
+  </div>
+</header>
+
+
+
+<div id="welcome">
+
+
+
+
+	<div class="container">
+		<div class="title">
+					<h1 >STATISTIQUES</h1>
+
+		</div>
+		<ul class="actions">
+		</ul>
+	</div>
+
 </div>
 
-<h2>Statistiques</h2>
-......
+
+
 <h2>Cartes Interactives</h2>
 <p>Sélectionner une métrique et une année</p>
 
@@ -130,7 +250,8 @@ function compare() {
 <br/>
 <br/>
 
-<input type="button" onclick="redirect()" value="Valider">
+<input type="button" 
+<input type="button" class="button button1"  onclick="redirect()" value="Valider">
 
 
 </FORM> 
@@ -144,7 +265,7 @@ function compare() {
 <h2>Cartes Interactives: Comparaison</h2>
 <p>Sélectionner une métrique et deux années à comparer</p>
 
-<FORM name="f2"> 
+<FORM name="f2" class="f2"  > 
 <label for="metrique">Métrique:</label>
 <select name="metrique" id="metrique">
 	<option value="EQUIPIERS">EQUIPIERS</ption>
@@ -237,7 +358,7 @@ function compare() {
 <br/>
 
 
-<input type="button" onclick="compare()" value="Valider">
+<input type="button" class="button button1" onclick="compare()" value="Valider">
 
 
 </FORM> 
@@ -245,6 +366,9 @@ function compare() {
 <p id="demo"></p>
 
 
+<div id="copyright" class="container" >
+	<p>&copy; Untitled. All rights reserved.  | Design by <a href="https://www.afm-telethon.fr/" rel="nofollow">AFM TELETHON</a>.</p>
+</div>
 </body>
 </html>
 

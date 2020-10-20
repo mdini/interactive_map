@@ -1,0 +1,68 @@
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+  	   background:url("../images/afm.jpg")no-repeat left, #ffb347; 
+
+		background-size: 30%;  
+	
+    font-family: 'Arial';  
+}  .login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+		  	   background:   url("../images/sa8run.png")no-repeat top  ,  #23463f; 
+			   		background-size: 12%;  
+
+
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #6b8e23;  
+    padding: 20px;  
+	/* font-style:oblique; */
+}  
+label{  
+    color: #6b8e23
+;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: #6b8e23
+;  
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: right;  
+	color:#6b8e23;
+    background-color: black;  
+}  
