@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_768eec750d344718aa2afd2614dd8886 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_768eec750d344718aa2afd2614dd8886" ></div>
+        
+</body>
+<script>    
+    
+            var map_768eec750d344718aa2afd2614dd8886 = L.map(
+                "map_768eec750d344718aa2afd2614dd8886",
+                {
+                    center: [-21.1151, 55.5364],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    maxZoom: 8.5,
+                }
+            );
+
+            
+
+        
+    
+            var feature_group_3768ca3be00a4dabafaf1633047486c8 = L.featureGroup(
+                {}
+            ).addTo(map_768eec750d344718aa2afd2614dd8886);
+        
+    
+            var tile_layer_60cff76815db4335a9be4b877fb15c14 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(feature_group_3768ca3be00a4dabafaf1633047486c8);
+        
+    
+            var marker_cluster_d3343cf4f412449c8a0f9ab0e6fdabb5 = L.markerClusterGroup(
+                {"disableClusteringAtZoom": 8, "maxClusterRadius": 0.001, "maxZoom": 9.5, "spiderfyDistanceMultiplier": true, "zoomToBoundsOnClick": false}
+            );
+            marker_cluster_d3343cf4f412449c8a0f9ab0e6fdabb5.options.iconCreateFunction =
+                function(cluster) {
+                    var childCount = cluster.getChildCount(); 
+                    var c = ' marker-cluster-';
+                     var size=50;
+                     var val = 0;
+                    childMarkers = cluster.getAllChildMarkers(); // Store in local variable to avoid having to execute it many times.
+                    all = childMarkers.length;
+
+                                for (i = 0; i < all; i++) {
+                    val =  childMarkers[i].options.title ;
+                    }
+                    val= val.substring(val.indexOf("-")-3);
+                    val=val.substring(-1,3);
+                    var htmls = '<div style=" background-color: yellow ; " ><span style="color: black  ; font-size: 8pt" >' + 
+                   'Réun' + '</span></div>'  ;
+
+                    if (childCount > 3) {
+                        c += 'small';
+                    } else if (childCount < 4) {
+                        c += 'medium';
+                        size=40;
+                        htmls= '<div style=" background-color: yellow ;" ><span style="color: black  ; font-size: 8pt;  " >' + 
+                        val + '</span></div>'  ;    
+                    } else {
+                        c += 'small';
+                        htmls= '<div style=" background-color: yellow" ><span style="color: black  ; font-size: 8pt ;" >' + 
+                        val + '</span></div>'  ;
+                  
+                    }
+
+                    return new L.DivIcon({className: 'marker-cluster' + c, 
+                    iconSize: new L.Point(size, size), 
+                    html: htmls });
+                    };
+            feature_group_3768ca3be00a4dabafaf1633047486c8.addLayer(marker_cluster_d3343cf4f412449c8a0f9ab0e6fdabb5);
+        
+    
+            var marker_84e908ac193247928f111f5f564f0b28 = L.marker(
+                [-21.1151, 55.5364],
+                {"title": "95 - \u00cele de la R\u00e9union"}
+            ).addTo(marker_cluster_d3343cf4f412449c8a0f9ab0e6fdabb5);
+        
+    
+            var icon_0e54cc129d854adea749d052426ac58e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "icon", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_84e908ac193247928f111f5f564f0b28.setIcon(icon_0e54cc129d854adea749d052426ac58e);
+        
+    
+        var popup_a1398d5b3355432f8d983c10abd7e781 = L.popup({"height": 550, "maxWidth": 1000});
+
+        
+            var html_70d6ad26804d46629db54973bc333235 = $(`<div id="html_70d6ad26804d46629db54973bc333235" style="width: 100.0%; height: 100.0%;">                  <head>                 <meta charset="UTF-8"/>                   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">                  </head>                                <br> <a href="../feedback_reunion.html"  style="color:green" target="_blank"  >  agrandir </a>                                   </br> </div>`)[0];
+            popup_a1398d5b3355432f8d983c10abd7e781.setContent(html_70d6ad26804d46629db54973bc333235);
+        
+
+        marker_84e908ac193247928f111f5f564f0b28.bindPopup(popup_a1398d5b3355432f8d983c10abd7e781)
+        ;
+
+        
+    
+    
+            var marker_f7be2fffeda54baa8160a4840be73394 = L.marker(
+                [-21.1151, 55.5364],
+                {}
+            ).addTo(marker_cluster_d3343cf4f412449c8a0f9ab0e6fdabb5);
+        
+    
+            var div_icon_69ac7923a54243238719c31772af7ea1 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20 pt; color : black\"\u003e\u003cspan\u003e95\u003c/span\u003e\u003c/div\u003e"});
+            marker_f7be2fffeda54baa8160a4840be73394.setIcon(div_icon_69ac7923a54243238719c31772af7ea1);
+        
+    
+            var feature_group_48c41ab4e3134caabd6541f1239c47d2 = L.featureGroup(
+                {}
+            ).addTo(map_768eec750d344718aa2afd2614dd8886);
+        
+    
+            var tile_layer_3ef4fecff5ee438392c77dd129c15113 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(feature_group_48c41ab4e3134caabd6541f1239c47d2);
+        
+    
+            var marker_cluster_38f146ee2f64427ab5d91c870a2b30ce = L.markerClusterGroup(
+                {"disableClusteringAtZoom": 6, "maxClusterRadius": 500, "maxZoom": 9.5, "spiderfyDistanceMultiplier": true, "zoomToBoundsOnClick": false}
+            );
+            marker_cluster_38f146ee2f64427ab5d91c870a2b30ce.options.iconCreateFunction =
+                function(cluster) {
+                    var childCount = cluster.getChildCount(); 
+                    var c = ' marker-cluster-';
+                     var size=50;
+                     var val = 0;
+                    childMarkers = cluster.getAllChildMarkers(); // Store in local variable to avoid having to execute it many times.
+                    all = childMarkers.length;
+
+                                for (i = 0; i < all; i++) {
+                    val =  childMarkers[i].options.title ;
+                    }
+                    val= val.substring(val.indexOf("-")-3);
+                    val=val.substring(-1,3);
+                    var htmls = '<div style=" background-color: yellow ; " ><span style="color: black  ; font-size: 8pt" >' + 
+                   'Réun' + '</span></div>'  ;
+
+                    if (childCount > 3) {
+                        c += 'small';
+                    } else if (childCount < 4) {
+                        c += 'medium';
+                        size=40;
+                        htmls= '<div style=" background-color: yellow ;" ><span style="color: black  ; font-size: 8pt;  " >' + 
+                        val + '</span></div>'  ;    
+                    } else {
+                        c += 'small';
+                        htmls= '<div style=" background-color: yellow" ><span style="color: black  ; font-size: 8pt ;" >' + 
+                        val + '</span></div>'  ;
+                  
+                    }
+
+                    return new L.DivIcon({className: 'marker-cluster' + c, 
+                    iconSize: new L.Point(size, size), 
+                    html: htmls });
+                    };
+            feature_group_48c41ab4e3134caabd6541f1239c47d2.addLayer(marker_cluster_38f146ee2f64427ab5d91c870a2b30ce);
+        
+    
+            var marker_9511038b904f40a4b3e0242b175bb169 = L.marker(
+                [-21.1151, 55.5364],
+                {"title": "95 - \u00cele de la R\u00e9union"}
+            ).addTo(marker_cluster_38f146ee2f64427ab5d91c870a2b30ce);
+        
+    
+            var icon_e7fa494e4cd245b9aaa83605bc8cea4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "icon", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_9511038b904f40a4b3e0242b175bb169.setIcon(icon_e7fa494e4cd245b9aaa83605bc8cea4b);
+        
+    
+        var popup_a8f761b503864e9c875da7963d5a57b9 = L.popup({"height": 550, "maxWidth": 1000});
+
+        
+            var html_ae06c4d704ee4a5baa8baa474d2c3156 = $(`<div id="html_ae06c4d704ee4a5baa8baa474d2c3156" style="width: 100.0%; height: 100.0%;">                  <head>                 <meta charset="UTF-8"/>                   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">                  </head>                                <br> <a href="../feedback_reunion.html"  style="color:green" target="_blank"  >  agrandir </a>                                   </br> </div>`)[0];
+            popup_a8f761b503864e9c875da7963d5a57b9.setContent(html_ae06c4d704ee4a5baa8baa474d2c3156);
+        
+
+        marker_9511038b904f40a4b3e0242b175bb169.bindPopup(popup_a8f761b503864e9c875da7963d5a57b9)
+        ;
+
+        
+    
+    
+            var marker_bdaf885f7db94a3cafb153612a3ca9d3 = L.marker(
+                [-21.1151, 55.5364],
+                {}
+            ).addTo(marker_cluster_38f146ee2f64427ab5d91c870a2b30ce);
+        
+    
+            var div_icon_3309fa35b3c740fe972ead955ee0e791 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 20 pt; color : black\"\u003e\u003cspan\u003e95\u003c/span\u003e\u003c/div\u003e"});
+            marker_bdaf885f7db94a3cafb153612a3ca9d3.setIcon(div_icon_3309fa35b3c740fe972ead955ee0e791);
+        
+    
+            var layer_control_a5a5d94b43fb4a66b270a5788d195230 = {
+                base_layers : {
+                    "num\u00e9ro d\u00e9partement" : feature_group_3768ca3be00a4dabafaf1633047486c8,
+                    " markers" : feature_group_48c41ab4e3134caabd6541f1239c47d2,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_a5a5d94b43fb4a66b270a5788d195230.base_layers,
+                layer_control_a5a5d94b43fb4a66b270a5788d195230.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_768eec750d344718aa2afd2614dd8886);
+            feature_group_48c41ab4e3134caabd6541f1239c47d2.remove();
+        
+</script>
